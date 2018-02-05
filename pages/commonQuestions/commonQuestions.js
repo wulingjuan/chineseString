@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
     data: {
+        // 问题列表
         questionsArray:[
             {
                 title:"如何提现到微信钱包",
