@@ -1,0 +1,42 @@
+page{
+  background:#f2f2f2;
+}
+view{
+  box-sizing: border-box;
+}
+.container{
+  padding:20px 10px;  
+} 
+.common-item{
+    padding:15px 10px;
+    background:#fff;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.item-title{
+  overflow: hidden;
+}
+.item-content{
+  color: #999;
+  padding-top: 10px;
+  font-size: 14px;
+
+}
+.common-item-text{
+  color: #666;
+  float: left;
+}
+.common-item-icon{
+  width: 20px;
+  height: 20px;
+  background: red;
+  float: right;
+}  
+.btn{
+  width: 100%;
+  background: #51a938;
+  color: #fff;
+  font-size: 16px;
+}
