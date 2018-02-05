@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="logo">
+        <image src="../../images/common-logo/xixi.png" mode="widthFix"/>
+    </view>
+    <view class="word">
+        <view class="word-text">发了一个成语接龙</view>
+        <view class="word-icon">
+            <image src="../../images/create_words/wallet.png" mode="widthFix"/>
+        </view>
+    </view>
+    <view>
+        <image src="../../images/create_words/logo.png" mode="widthFix"/>
+    </view>
+    <button>发送群聊或好友</button>
+    <button>生成朋友圈分享图</button>
+    <navigator>自己试试-></navigator>
+</view>

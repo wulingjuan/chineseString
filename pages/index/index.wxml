@@ -1,62 +1,71 @@
 <!--index.wxml-->
 <view class="container">
   <view class="logo">
-    <image src="./../../images/common-logo/xixi.png" style="width:100%;" mode="widthFix"/>
+    <image src="./../../images/common-logo/xixi.png"/>
   </view>
   <view class="item">
     <view class="item-title">设置成语</view>
     <view class="item-input">
-      <input placeholder="请设置成语"/>
+      <input placeholder="请设置成语" type="text"/>
     </view>
   </view>
-  <view class="item">
-    <view>小伙伴们说对口令就能获得随机的打赏</view>
-    <view>推荐口令</view>
+  <view class="item item-recommand">
+    <view class="item-recommand-text">小伙伴们说对口令就能获得随机的打赏</view>
+    <view class="item-recommand-btn">推荐口令</view>
   </view>
   <view class="item">
     <view class="item-title">数量（个）</view>
     <view class="item-input">
-      <input value=""/>
+      <input value="" type="text"/>
     </view>
   </view>
   <view class="item">
     <view class="item-title">赏金（元）</view>
     <view class="item-input">
-      <input value=""/>
+      <input value="" type="text"/>
     </view>
   </view>
   <view class="item">
     <view class="item-title">个性设置</view>
     <view class="item-input">
-      <input placeholder="请捎上一句吉祥话（可选）"/>
+      <input placeholder="捎上一句吉祥话(可选)" type="text"/>
     </view>
   </view>
   <view class="item">
     <view class="item-title"></view>
     <view class="item-input">
-      <input type="checkbox"/>
-      <input placeholder="公开投放到红包广场" type="text"/>
+        <label for="checkbox">
+          <checkbox checked="" id="checkbox"/><text>公开投放到红包广场</text>
+        </label>
     </view>
   </view>
-  <view class="item item-pay">需支付￥0.02元服务费，优先使用余额：￥0.00元</view>
+  <view class="item-pay">需支付￥0.02元服务费,优先使用余额：￥0.00元</view>
   <button class="btn">还需支付1.02元</button>
 </view>
 <text class="call">联系客服</text>
 <view class="footer">
   <navigator class="tab">
-    <view></view>
-    <view>我的红包</view>
+    <view class="tab-logo">
+      <image src="./../../images/common-logo/earn.png" mode="widthFix"/>
+    </view>
+    <view class="tab-text">我的红包</view>
   </navigator>
   <navigator class="tab">
-    <view></view>
-    <view>红包广场</view>
+    <view class="tab-logo">
+      <image src="./../../images/common-logo/red_wallet.png" mode="widthFix"/>
+    </view>
+    <view class="tab-text">红包广场</view>
   </navigator>
   <navigator class="tab">
-    <view>余额提现</view>
-    <view></view>
+    <view class="tab-logo">
+      <image src="./../../images/common-logo/record.png" mode="widthFix"/>
+    </view>
+    <view class="tab-text">余额提现</view>
   </navigator>
   <navigator class="tab">
-    <view></view>
-    <view>常见问题</view>
+    <view class="tab-logo">
+      <image src="./../../images/common-logo/questions.png" mode="widthFix"/>
+    </view>
+    <view class="tab-text">常见问题</view>
   </navigator>
 </view>

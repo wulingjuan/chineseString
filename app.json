@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/commonQuestions/commonQuestions"
+    "pages/commonQuestions/commonQuestions",
+    "pages/createRedWallet/createRedWallet"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -30,7 +30,7 @@
 				{
 					"id": 0,
 					"name": "测试模式",
-					"pathName": "pages/index/index",
+					"pathName": "pages/createRedWallet/createRedWallet",
 					"query": ""
 				}
 			]
