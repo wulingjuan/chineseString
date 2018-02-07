@@ -17,7 +17,7 @@
         <view class="icon-item">
             <navigator url="../index/index">
                 <view class="icon-item-img">
-                    <image src="../../images/break_wallet/01.png" mode="widthFix"/>
+                    <image src="../../images/break_wallet/02.png" mode="widthFix"/>
                 </view>
                 <view class="icon-item-txt">去发红包</view>
             </navigator>
@@ -33,9 +33,9 @@
         <view class="icon-item">
            <navigator>
                 <view class="icon-item-img">
-                    <image src="../../images/break_wallet/05.png" mode="widthFix"/>
+                    <image src="../../images/break_wallet/03.png" mode="widthFix"/>
                 </view>
-                <view class="icon-item-txt">订阅提醒</view>
+                <view class="icon-item-txt">去转发</view>
             </navigator>
         </view>
     </view>
