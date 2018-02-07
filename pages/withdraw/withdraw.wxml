@@ -1,0 +1,20 @@
+<view class="container">
+    <view class='earn'>
+      <view class='earn-money'><text>0.00</text>元</view>
+      <view class='earn-txt'>账户余额</view>
+    </view>
+    <view class='main'>
+      <view class='main-title'>提现金额</view>
+      <view class='main-input'>
+        <text>￥</text><input type='number'></input>
+      </view>
+      <view class='main-action'>提现到微信钱包，
+        <text>全部提现</text>
+      </view>
+      <button class='comfirm'>确认提现</button>
+      <button class='start'>发个成语接龙</button>
+    </view>
+</view>
+<view class='link'>
+  <navigator>联系客服</navigator>|<navigator>投诉</navigator>
+</view>

@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="logo">
-    <image src="./../../images/common-logo/xixi.png"/>
+    <image src="./../../images/common-logo/girl.jpg"/>
   </view>
   <view class="item">
     <view class="item-title">设置成语</view>
@@ -16,13 +16,13 @@
   <view class="item">
     <view class="item-title">数量（个）</view>
     <view class="item-input">
-      <input value="" type="text"/>
+      <input value="" type="number"/>
     </view>
   </view>
   <view class="item">
     <view class="item-title">赏金（元）</view>
     <view class="item-input">
-      <input value="" type="text"/>
+      <input value="" type="number"/>
     </view>
   </view>
   <view class="item">
@@ -44,25 +44,25 @@
 </view>
 <text class="call">联系客服</text>
 <view class="footer">
-  <navigator class="tab">
+  <navigator class="tab" url="../myWallet/myWallet">
     <view class="tab-logo">
       <image src="./../../images/common-logo/earn.png" mode="widthFix"/>
     </view>
     <view class="tab-text">我的红包</view>
   </navigator>
-  <navigator class="tab">
+  <navigator class="tab" url="../walletSquare/walletSquare">
     <view class="tab-logo">
       <image src="./../../images/common-logo/red_wallet.png" mode="widthFix"/>
     </view>
     <view class="tab-text">红包广场</view>
   </navigator>
-  <navigator class="tab">
+  <navigator class="tab" url="../withdraw/withdraw">
     <view class="tab-logo">
       <image src="./../../images/common-logo/record.png" mode="widthFix"/>
     </view>
     <view class="tab-text">余额提现</view>
   </navigator>
-  <navigator class="tab">
+  <navigator class="tab" url="../commonQuestions/commonQuestions">
     <view class="tab-logo">
       <image src="./../../images/common-logo/questions.png" mode="widthFix"/>
     </view>

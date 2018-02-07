@@ -1,0 +1,85 @@
+page{
+  background: #f3f3f3;
+}
+.tab{
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.tab-item{
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx;
+  padding: 20rpx 0rpx 0px;
+}
+.tab-item-line{
+  width: 160rpx;
+  height: 4rpx;
+  margin: 20rpx auto 0px;
+  background: #c96148;
+  display: none;
+}
+.tab-item.active .tab-item-line{
+  display: block;
+}
+.banner{
+  width:100%;
+  height:300rpx;
+  background-color:#f3f3f3; 
+  background-size:100% 100%;
+  color: #666;
+  padding: 20rpx 0rpx;
+}
+image{
+  width:100%;
+}
+.banner-img{
+  width:100rpx;
+  height:100rpx;
+  margin:35rpx auto 20rpx;
+  background: #fff;
+  padding: 8rpx;
+  border-radius: 100%;
+}
+.banner-img image{
+  border-radius: 100%;
+}
+.banner-title{
+  text-align: center;
+  font-size:32rpx;
+  margin-bottom: 20rpx;
+  color: #999;
+}
+.banner-money{
+  font-size: 32rpx;
+  text-align: center;
+}
+.list{
+  background:#fff;
+  padding: 20rpx;
+}
+.list-item{
+  margin-bottom: 30rpx;
+}
+.list-item-info,.list-item-data{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.list-item-info{
+  font-size: 28rpx;
+  margin-bottom: 14rpx;
+}
+.list-item-data{
+  font-size: 24rpx;
+  color: #999;
+}
+.list-item-info-title,.list-item-data-date{
+  width: 90%;
+}
+.link{
+  margin:80rpx 0rpx 40rpx;
+  text-align: center;
+  font-size:32rpx;
+}

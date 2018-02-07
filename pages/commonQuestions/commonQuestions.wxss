@@ -1,5 +1,5 @@
 page{
-  background:#f2f2f2;
+  background:#f3f3f3;
 }
 view{
   box-sizing: border-box;
@@ -31,7 +31,8 @@ view{
 .common-item-icon{
   width: 20px;
   height: 20px;
-  background: red;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAArCAMAAAAAJluXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASBQTFRF////AAAA/v7+/f39c3Nz+vr6/Pz8BgYGCwsLm5ub+fn5pKSkkZGRtLS09/f3+/v79fX1+Pj48vLy9vb2AgICDg4OCAgI8/PzmJiYra2tb29vBQUFBwcH9PT0AwMD8PDw6enpsrKysbGxoaGhFBQUdXV1CgoKioqK7e3tw8PDuLi4DQ0NcXFxAQEBeXl5o6OjlpaW0dHRpaWlOTk5RUVFqqqqPDw8np6eODg4NTU16urqbW1t7+/v1tbWbm5un5+fubm5MjIy8fHx3t7eu7u7r6+v7u7uj4+PoqKip6enkJCQdHR0rKysqampdnZ2jo6OCQkJ7OzsampqDAwMmZmZa2trrq6uhoaGwcHBi4uLtbW1h4eHxcXFwMDAd3d3jIyMFqAjcAAAAZNJREFUeNrslMdWHDEQRV+XRpoZgVsdh8lkg8k5OAE2wSbYJjiR/P9/YTXsqqU1m7nLOud26byqamDAS5LGiAkpLwtJEdBzOypFDJGCGKEk0hLklMZuJle+1JuTdcbXoVvEIYxT+tNf7FeDHwGnHxzM2obSKT1kQdYJGiWpke2+Bwm3hKO51v7Er7lXjInzQ+gYbkmE0KCwXAeKIDxEIWJBkWIIrRKink+ynQRBMPAWRiHRbkfbd8dQvG5fPAJFnk6f0sQk0JIBMhKj5Y898WGh3T5beKxw3lX+HsvRIg8Hb14vZkEnKJOt2zc6Yn2WOt3uVCOvMvLGjo58iYf1ve211kVriDG+OY5YSuVLLySpSmO0t2LXlYynlzECUTlbU2RO7szJztbeVCklI2wIoWePZiGVsnPiG2FDGEMivAffg9SSX64ommsx4jQ+V779nF76OM2H276asYfrudzVYpDVrMpnWwu2qGjllO67eS2fz+drjKnrjUR4HFzeNX83T/7NDDNOvy8bJIgG//gBL85/AQYA2KMhmYkBdBkAAAAASUVORK5CYII=);
+  background-size:100% 100%;
   float: right;
 }  
 .btn{

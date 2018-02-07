@@ -1,0 +1,81 @@
+<view class="container">
+    <view class='mainInfo'>
+      <view class="mainInfo-item">
+        <view class="mainInfo-item-number">5</view>
+        <view class="mainInfo-item-title">我的喜豆</view>
+      </view>
+      <view class="mainInfo-item">
+        <view class="mainInfo-item-number">5344</view>
+        <view class="mainInfo-item-title">抢到人次</view>
+      </view>
+      <view class="mainInfo-item">
+        <view class="mainInfo-item-number">1.17w</view>
+        <view class="mainInfo-item-title">累计红包金额</view>
+      </view>
+    </view>
+    <view class="icon">
+        <view class="icon-item">
+            <navigator url="../index/index">
+                <view class="icon-item-img">
+                    <image src="../../images/break_wallet/01.png" mode="widthFix"/>
+                </view>
+                <view class="icon-item-txt">去发红包</view>
+            </navigator>
+        </view>
+        <view class="icon-item">
+            <navigator catchtap='tapHandler'>
+                <view class="icon-item-img">
+                    <image src="../../images/break_wallet/04.png" mode="widthFix"/>
+                </view>
+                <view class="icon-item-txt">获取喜豆</view>
+            </navigator>
+        </view>
+        <view class="icon-item">
+           <navigator>
+                <view class="icon-item-img">
+                    <image src="../../images/break_wallet/05.png" mode="widthFix"/>
+                </view>
+                <view class="icon-item-txt">订阅提醒</view>
+            </navigator>
+        </view>
+    </view>
+</view>   
+<view class="list">
+    <view wx:for="{{annoceList}}" class="list-item">
+      <navigator>
+        <view class='list-item-img'>
+          <image src="{{item.img}}" mode="widthFix"></image>
+        </view>
+        <view class='list-item-info'>
+          <view class="list-item-info-title">点击进入成语接龙</view>
+          <view class="list-item-info-money">{{item.money}}元{{item.num}}份，剩余{{item.earnNumber}}份</view>
+          <view class="list-item-info-name"><text>来自：</text>{{item.username}}</view>
+        </view>
+      </navigator>
+    </view>
+</view>
+<navigator class="update" catchtap='updateHandler'></navigator>
+<view class='fixed-ins' style='display:{{flag?"block":"none"}}'>
+  <view class="ins-item">
+    <view class="ins-title">嘻嘻豆有什么用？
+    <view class='close' catchtap='closeTapHandler'>X</view>
+    </view>
+    <view class="ins-txt">
+      嘻嘻豆用于在红包广场玩成语接龙，每抢一次广场红包（包含未成功）消耗一个嘻嘻豆。
+    </view>
+  </view>
+  <view class="ins-item">
+    <view class="ins-title">如何获得嘻嘻豆？
+    </view>
+    <view class="ins-txt">
+      分享红包或红包广场页面到微信群，有好友进入，即可获得3个嘻嘻豆。
+    </view>
+  </view>
+  <view class="ins-item">
+    <view class="ins-title">每天嘻嘻豆奖励</view>
+    <view class="ins-txt">
+      每人每天可以获得平台奖励的2个嘻嘻豆。
+    </view>
+  </view>
+  <button class='btn'>转发分享红包获得嘻嘻豆</button>
+</view>

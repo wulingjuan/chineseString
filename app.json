@@ -2,7 +2,11 @@
   "pages":[
     "pages/index/index",
     "pages/commonQuestions/commonQuestions",
-    "pages/createRedWallet/createRedWallet"
+    "pages/createRedWallet/createRedWallet",
+    "pages/breakRedWallet/breakRedWallet",
+    "pages/walletSquare/walletSquare",
+    "pages/myWallet/myWallet",
+    "pages/withdraw/withdraw"
   ],
   "window":{
     "backgroundTextStyle":"light",

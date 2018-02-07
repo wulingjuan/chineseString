@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="logo">
+        <image src="../../images/create_words/person.jpg" mode="widthFix"/>
+    </view>
+    <view class="username">shirley</view>
+    <view wx:if="{{state==0}}">
+        <view class="clock">(倒计时{{time}}s)</view>
+        <view class="four-words">一帆风顺</view>
+        <view class="input">
+            <input placeholder="请输入(顺)字开头的成语" type="text"/>
+        </view>
+        <button class="btn">确认</button>
+    </view>
+    <view wx:elif="{{state==1}}">
+        <view class="money">1.00元</view>   
+    </view>
+    <view wx:else>
+        <view class="fail">
+          <view class="fail-title">接龙失败</view>
+          <view class="fail-hint">找朋友帮忙，也可以拿到红包赏金哦</view>
+        </view>   
+    </view>
+    <view class="icon">
+        <view class="icon-item">
+            <navigator url="../withdraw/withdraw">
+                <view class="icon-item-img">
+                    <image src="../../images/break_wallet/01.png" mode="widthFix"/>
+                </view>
+                <view class="icon-item-txt">去提现</view>
+            </navigator>
+        </view>
+        <view class="icon-item">
+            <navigator url="../index/index">
+                <view class="icon-item-img">
+                    <image src="../../images/break_wallet/02.png" mode="widthFix"/>
+                </view>
+                <view class="icon-item-txt">我也要发</view>
+            </navigator>
+        </view>
+        <view class="icon-item">
+           <navigator>
+                <view class="icon-item-img">
+                    <image src="../../images/break_wallet/03.png" mode="widthFix"/>
+                </view>
+                <view wx:if="{{state!=2}}" class="icon-item-txt">转给好友</view>
+                <view wx:else="{{state!=2}}" class="icon-item-txt">找朋友帮忙</view>
+            </navigator>
+        </view>
+    </view>
+</view>
+<view class="list">
+    <view style="clear:both;overflow:hidden;padding:0rpx 20rpx 20rpx;">
+      <view class="list-wallet">共1.00元，领取0/1个</view>
+      <view class="list-complain">
+          <navigator>投诉</navigator>
+      </view>
+    </view>
+    <view wx:if="{{state!=0}}">
+        <view wx:for="{{getWallList}}" class="list-item">
+            <view class="list-item-img">
+                <image src="{{item.img}}" mode="widthFix"></image>
+            </view>
+            <view class="list-item-info">
+              <view style="color:#999;margin-bottom:10rpx;">{{item.username}}</view>
+              <view style="color:#333">{{item.word}}</view>
+            </view>
+            <view class="list-item-money">
+              <view style="color:#d14e53;margin-bottom:10rpx;text-align:right">{{item.money}}元</view>
+              <view style="color:#999">{{item.data}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="try">
+   <navigator url="../myWallet/myWallet">红包记录</navigator>|<navigator>联系客服</navigator>
+</view>
+<navigator class="red-square" url="../walletSquare/walletSquare"></navigator>

@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
     <view class="logo">
-        <image src="../../images/common-logo/xixi.png" mode="widthFix"/>
+        <image src="../../images/create_words/person.jpg" mode="widthFix"/>
     </view>
     <view class="word">
         <view class="word-text">发了一个成语接龙</view>
@@ -9,10 +9,11 @@
             <image src="../../images/create_words/wallet.png" mode="widthFix"/>
         </view>
     </view>
-    <view>
+     <view class="four-word">一帆风顺</view> 
+    <view class="program-logo">
         <image src="../../images/create_words/logo.png" mode="widthFix"/>
     </view>
-    <button>发送群聊或好友</button>
-    <button>生成朋友圈分享图</button>
-    <navigator>自己试试-></navigator>
+    <button class="shareTo-friends">发送群聊或好友</button>
+    <button class="shareTo-socity">生成朋友圈分享图</button>
+    <navigator class="try" url="../index/index">自己试试-></navigator>
 </view>

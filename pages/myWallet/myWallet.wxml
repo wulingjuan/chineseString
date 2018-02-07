@@ -1,0 +1,50 @@
+<view class="container">
+  <view class='tab'>
+    <view class='{{giveClick ? "tab-item active":"tab-item"}}' catchtap='giveTapHandler'>我发出的
+      <view class='tab-item-line'></view>
+    </view>
+    <view class='{{getClick ? "tab-item active":"tab-item"}}' catchtap='getTapHandler'>我收到的
+      <view class='tab-item-line'></view>
+    </view>
+  </view>
+  <view class='banner'>
+    <view class='banner-img'>
+      <image src='../../images/common-logo/girl.jpg' mode="widthFix"></image>
+    </view>
+    <view wx:if="{{state==0}}">
+      <view class='banner-title'>shirley共发出2个红包</view>
+      <view class='banner-money'>10元</view> 
+    </view>
+    <view wx:else>
+      <view class='banner-title'>shirley共收到4个红包</view>
+      <view class='banner-money'>20元</view> 
+    </view>
+  </view>
+</view>   
+<view class="list">
+  <view wx:if="{{state==0}}">
+    <view wx:for="{{giveWalletList}}" class="list-item" >
+      <view class='list-item-info'>
+        <view class="list-item-info-title">{{item.words}}</view>
+        <view class="list-item-info-money">{{item.money}}元</view>
+      </view>
+      <view class='list-item-data'>
+        <view class="list-item-data-date">{{item.date}}</view>
+        <view class="list-item-data-num">{{item.earnNum}}/{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view wx:for="{{getWalletList}}" class="list-item">
+      <view class='list-item-info'>
+        <view class="list-item-info-title">{{item.words}}</view>
+        <view class="list-item-info-money">{{item.money}}元</view>
+      </view>
+      <view class='list-item-data'>
+        <view class="list-item-data-date">{{item.date}}</view>
+        <view class="list-item-data-num">{{item.earnNum}}/{{item.num}}</view>
+      </view>
+    </view> 
+  </view>
+</view>
+<navigator url="../commonQuestions/commonQuestions" class='link'>常见问题</navigator>

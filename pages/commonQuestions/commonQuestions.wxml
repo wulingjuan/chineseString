@@ -4,7 +4,6 @@
         <view class="item-title">
             <view class="common-item-text">{{item.title}}</view>
             <view class="common-item-icon" data-index="{{index}}" catchtap="tapHandler"></view> 
-            
         </view>
         <view style="display:{{item.flag?'block':'none'}}" class="item-content">
           {{item.content}}

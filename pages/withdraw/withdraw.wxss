@@ -1,0 +1,85 @@
+page{
+  background: #f3f3f3;
+  color: #333;
+}
+.container{
+  margin: 50rpx 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.earn{
+  padding: 40rpx 0rpx;
+  background: #fbfbfb;
+  width: 100%;
+  box-sizing: border-box;
+}
+.earn-money{
+  color:#333;
+  font-size: 24rpx;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.earn-money text{
+  color: #999;
+  font-size: 60rpx;
+  margin-right: 6rpx;
+}
+.earn-txt{
+  font-size: 28rpx;
+  text-align: center;
+}
+.main{
+  padding: 40rpx 0rpx;
+  width: 86%;
+}
+.main-title{
+  font-size: 36rpx;
+  margin-bottom: 18rpx;
+}
+.main-input{
+  margin-bottom: 20rpx;
+}
+.main-input text{
+  float: left;
+  font-size: 50rpx;
+}
+.main-input input{
+  border-bottom: 1rpx solid #666;
+  text-align: center;
+}
+.main-action{
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+  padding: 0rpx 10rpx;
+}
+.main-action text{
+  color: #5f657b;
+}
+button{
+  font-size: 32rpx;
+  border: none;
+  width: 100%;
+  outline: none;
+}
+.comfirm{
+  background: #51a938;
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+.start{
+  background: #f5f5f5;
+  border: none;
+  color: #333;
+}
+.link{
+  padding: 20rpx 0rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 50%;
+  margin-left: -105rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 28rpx;
+  color: #666;
+  width: 210rpx;
+}
