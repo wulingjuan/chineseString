@@ -6,14 +6,14 @@
     <view class="username">shirley</view>
     <view wx:if="{{state==0}}">
         <view class="clock">(倒计时{{time}}s)</view>
-        <view class="four-words">一帆风顺</view>
+        <view class="four-words">{{pack.content}}</view>
         <view class="input">
             <input placeholder="请输入(顺)字开头的成语" type="text"/>
         </view>
         <button class="btn">确认</button>
     </view>
     <view wx:elif="{{state==1}}">
-        <view class="money">1.00元</view>   
+        <view class="money">{{getMoney}}</view>   
     </view>
     <view wx:else>
         <view class="fail">
@@ -56,18 +56,34 @@
           <navigator>投诉</navigator>
       </view>
     </view>
+    <view class='adver'>
+      <view class='adver-logo'>广告</view>
+      <view class='adver-img'>
+        <image src='../../images/create_words/logo.png' mode='widthFix'></image>
+      </view>
+      <view class='adver-txt'>
+        <view class='adver-title'>
+          <view>来不及解释了</view>
+          <view>快上车</view>
+        </view>
+        <view class='adver-content'>
+          体验友帮友的方便与乐趣，去认识陌生和有趣的人
+        </view>
+        <navigator class='adver-join'>点击立即参与</navigator>
+      </view>
+    </view>
     <view wx:if="{{state!=0}}">
         <view wx:for="{{getWallList}}" class="list-item">
             <view class="list-item-img">
-                <image src="{{item.img}}" mode="widthFix"></image>
+                <image src="{{item.headimg}}" mode="widthFix"></image>
             </view>
             <view class="list-item-info">
-              <view style="color:#999;margin-bottom:10rpx;">{{item.username}}</view>
+              <view style="color:#999;margin-bottom:10rpx;">{{item.nickname}}</view>
               <view style="color:#333">{{item.word}}</view>
             </view>
             <view class="list-item-money">
-              <view style="color:#d14e53;margin-bottom:10rpx;text-align:right">{{item.money}}元</view>
-              <view style="color:#999">{{item.data}}</view>
+              <view style="color:#d14e53;margin-bottom:10rpx;text-align:right">{{item.amount}}元</view>
+              <view style="color:#999">{{item.at}}</view>
             </view>
         </view>
     </view>

@@ -14,7 +14,7 @@ Page({
         earnNum: 1
       },
       {
-        money: 5,
+        money: 100,
         num: 3,
         date: "2月4日 22:48",
         words: "一帆风顺",

@@ -61,6 +61,12 @@ image{
 }
 .list-item{
   margin-bottom: 30rpx;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30rpx;
+}
+.list-item:last-child{
+  padding-bottom: 0rpx;
+  border: none;
 }
 .list-item-info,.list-item-data{
   width: 100%;
@@ -76,10 +82,15 @@ image{
   color: #999;
 }
 .list-item-info-title,.list-item-data-date{
-  width: 90%;
+  width: 80%;
+}
+.list-item-info-money,.list-item-data-num{
+  text-align: right;
+  width: 20%;
 }
 .link{
   margin:80rpx 0rpx 40rpx;
   text-align: center;
-  font-size:32rpx;
+  font-size:24rpx;
+  color: #586c94;
 }

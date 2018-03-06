@@ -37,15 +37,23 @@ page{
   margin-bottom: 18rpx;
 }
 .main-input{
+  border-bottom: 1rpx solid #ddd;
   margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
 }
 .main-input text{
+  display: block;
   float: left;
   font-size: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
 }
 .main-input input{
-  border-bottom: 1rpx solid #666;
-  text-align: center;
+  display: block;
+  /* text-align: center; */
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 50rpx;
 }
 .main-action{
   font-size: 28rpx;
@@ -79,7 +87,13 @@ button{
   margin-left: -105rpx;
   display: flex;
   flex-direction: row;
-  font-size: 28rpx;
-  color: #666;
-  width: 210rpx;
+  font-size: 24rpx;
+  color: #586c94;
+  width: 216rpx;
+}
+.link navigator:nth-child(1){
+  margin-right: 20rpx;
+}
+.link navigator:nth-child(2){
+  margin-left: 20rpx;
 }

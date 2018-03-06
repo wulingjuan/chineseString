@@ -1,18 +1,58 @@
 //app.js
-App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+var config = require('comm/script/config');
+var util = require('./util/util');
+var aldstat = require("./util/ald-stat.js");
+var wxApi = require('./util/wxApi')
+var wxRequest = require('./util/wxRequest')
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
+App({
+  globalData: {
+    popularType: null,
+    prePage: null,
+    userInfo: null,
+    belong: null,
+    iv: null,
+    encryptedData: null,
+    code: null,
+    sid: null,
+    city: null,
+	  location:'未知',
+    cate: null,
+    socket: null,  //socket连接，全局唯一；
+    formIds:[]
+  },
+  getUserInfo:function(){
+    var that = this;
+    if(that.globalData.userInfo){
+      return that.globalData.userInfo;
+    }else{
+      return wx.getStorageSync("person_info");
+    }
+  },
+  setUserInfo:function(userinfo){
+    var that = this;
+    that.globalData.sid = userinfo.id;
+    that.globalData.userInfo = userinfo;
+    wx.setStorageSync('person_info', userinfo);
+  },  
+  onLaunch: function () {
+    console.info('index onLaunch');
+    var that = this;
+	  wx.showLoading({
+      title: '正在加载',
     })
-    // 获取用户信息
+    that.login(function(){
+      wx.hideLoading();
+	    if(that.userInfoReadyCallback){
+		    console.info('index onLaunch cb');
+		    that.userInfoReadyCallback(that.globalData.userInfo)
+	    }  
+    });
+	
+	
+
+  /*  
+   // 获取用户信息
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -32,8 +72,79 @@ App({
         }
       }
     })
+	*/
   },
-  globalData: {
-    userInfo: null
-  }
+  contains: function (arr, el) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === el)
+        return true;
+    }
+    return false;
+  },
+  getCity: function (cb) {
+    var that = this;    
+    var wxLocation = wxApi.wxGetLocation();
+    wxLocation({ type: 'wgs84'})
+    .then(res => {
+      var locationParam = res.latitude + ',' + res.longitude + '1'
+      var url = config.apiList.baiduMap;
+      var params = {
+        ak: config.baiduAK,
+        location: locationParam,
+        output: 'json',
+        pois: '1'
+      };
+      return wxRequest.getRequest(url, params);     
+    }).
+    then(res => {
+	    that.globalData.location = res.data.result.addressComponent.city;
+      config.city = res.data.result.addressComponent.city;
+    }).
+    finally(function (res) {
+      if(!config.city)
+         config.city = '北京市';
+      typeof cb == "function" && cb(config.city)
+    });
+  },
+  login:function (cb){
+    var that = this;
+    //1.获取code
+    var wxLogin = wxApi.wxLogin();
+    wxLogin().then(res => {
+		that.globalData.code = res.code;
+		var wxGetUserInfo = wxApi.wxGetUserInfo()
+		return wxGetUserInfo()
+	  }).
+	  then(res => {
+		that.globalData.encryptedData = res.encryptedData;
+		that.globalData.iv = res.iv;
+		var url = config.apiList.userMore;
+		var params = {
+		  code: that.globalData.code,
+		  encryptedData: that.globalData.encryptedData,
+		  iv: that.globalData.iv
+		}
+		//获取个人信息
+		return wxRequest.getRequest(url, params);
+	  }).
+	  then(res => {
+      var acc = res.data.acc;
+      acc.cateList = res.data.cate;
+      acc.subCateList = res.data.subcate;
+
+      that.globalData.sid = acc.id;
+      that.globalData.userInfo = acc;
+      that.setUserInfo(acc);
+	  })
+	  .finally(function (res) {
+        if (!cb) {
+          wx.showToast({
+          title: '认证超时，重新操作！',
+          icon: 'warn',
+          duration: 1000
+          })
+        }
+        typeof cb == 'function' && cb()
+        })
+	}
 })

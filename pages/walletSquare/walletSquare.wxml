@@ -2,7 +2,7 @@
     <view class='mainInfo'>
       <view class="mainInfo-item">
         <view class="mainInfo-item-number">5</view>
-        <view class="mainInfo-item-title">我的喜豆</view>
+        <view class="mainInfo-item-title">我的嘻嘻豆</view>
       </view>
       <view class="mainInfo-item">
         <view class="mainInfo-item-number">5344</view>
@@ -14,30 +14,30 @@
       </view>
     </view>
     <view class="icon">
-        <view class="icon-item">
-            <navigator url="../index/index">
-                <view class="icon-item-img">
-                    <image src="../../images/break_wallet/02.png" mode="widthFix"/>
-                </view>
-                <view class="icon-item-txt">去发红包</view>
-            </navigator>
-        </view>
-        <view class="icon-item">
-            <navigator catchtap='tapHandler'>
-                <view class="icon-item-img">
-                    <image src="../../images/break_wallet/04.png" mode="widthFix"/>
-                </view>
-                <view class="icon-item-txt">获取喜豆</view>
-            </navigator>
-        </view>
-        <view class="icon-item">
-           <navigator>
-                <view class="icon-item-img">
-                    <image src="../../images/break_wallet/03.png" mode="widthFix"/>
-                </view>
-                <view class="icon-item-txt">去转发</view>
-            </navigator>
-        </view>
+      <view class="icon-item">
+        <navigator url="../index/index">
+            <view class="icon-item-img">
+              <image src="../../images/break_wallet/02.png" mode="widthFix"/>
+            </view>
+            <view class="icon-item-txt">去发红包</view>
+        </navigator>
+      </view>
+      <view class="icon-item" style="margin-top:2rpx;margin-left:76rpx;">
+          <navigator catchtap='tapHandler'>
+              <view class="icon-item-img">
+                  <image src="../../images/break_wallet/04.png" mode="widthFix"/>
+              </view>
+              <view class="icon-item-txt">获取嘻嘻豆</view>
+          </navigator>
+      </view>
+      <view class="icon-item" style="margin-top:3rpx;float:right;">
+          <navigator>
+              <view class="icon-item-img">
+                  <image src="../../images/break_wallet/03.png" mode="widthFix"/>
+              </view>
+              <view class="icon-item-txt">去转发</view>
+          </navigator>
+      </view>
     </view>
 </view>   
 <view class="list">
